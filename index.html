@@ -1,0 +1,972 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Felipe Brandão Cordeiro - Analista e Desenvolvedor de Sistemas - Java Backend, Spring Boot, Kafka, Microservices, Distributed Systems."
+          name="description"/>
+    <title>Felipe Brandão | Analista e Desenvolvedor de Sistemas</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+          rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#93000a",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface-variant": "#c2c6d6",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#2a2a2a",
+                        "on-secondary-container": "#b7b5b4",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#d8e2ff",
+                        "tertiary-fixed": "#e4e2e1",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "surface-dim": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-tint": "#adc6ff",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#313030",
+                        "secondary-container": "#474746",
+                        "surface-bright": "#3a3939",
+                        "primary-container": "#4d8eff",
+                        "tertiary-container": "#929090",
+                        "background": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-container": "#00285d",
+                        "on-primary-fixed-variant": "#004395",
+                        "secondary": "#c8c6c5",
+                        "surface": "#131313",
+                        "inverse-primary": "#005ac2",
+                        "on-primary-fixed": "#001a42",
+                        "surface-container-highest": "#353534",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-secondary": "#313030",
+                        "primary": "#adc6ff",
+                        "tertiary": "#c8c6c5",
+                        "on-tertiary": "#303030",
+                        "on-background": "#e5e2e1",
+                        "secondary-fixed": "#e5e2e1",
+                        "outline-variant": "#424754",
+                        "surface-variant": "#353534",
+                        "on-primary": "#002e6a",
+                        "primary-fixed-dim": "#adc6ff",
+                        "outline": "#8c909f",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-page": "48px",
+                        "section-gap": "80px",
+                        "stack-lg": "32px",
+                        "container-max-width": "1200px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "technical-caps": ["Inter"],
+                        "label": ["Inter"],
+                        "h1": ["Inter"],
+                        "h3": ["Inter"],
+                        "h2": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "technical-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "label": ["14px", {"lineHeight": "1", "letterSpacing": "0", "fontWeight": "500"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+
+        .code-block {
+            background-color: #050505;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .experience-card:hover {
+            border-color: rgba(173, 198, 255, 0.4);
+        }
+
+        .experience-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: #c2c6d6;
+        }
+
+        .experience-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #adc6ff;
+            font-weight: bold;
+        }
+
+        html.light body {
+            background-color: #f8f9fa;
+            color: #191c1d;
+        }
+
+        html.light .bg-background {
+            background-color: #f8f9fa !important;
+        }
+
+        html.light .bg-background\/95 {
+            background-color: rgb(248 249 250 / 0.95) !important;
+        }
+
+        html.light .bg-surface-container-low {
+            background-color: #f3f4f5 !important;
+        }
+
+        html.light .bg-surface-container {
+            background-color: #edeeef !important;
+        }
+
+        html.light .bg-surface-container-high {
+            background-color: #e7e8e9 !important;
+        }
+
+        html.light .bg-surface-container-highest {
+            background-color: #e1e3e4 !important;
+        }
+
+        html.light .bg-primary {
+            background-color: #003ec7 !important;
+        }
+
+        html.light .bg-outline {
+            background-color: #737688 !important;
+        }
+
+        html.light .text-on-surface {
+            color: #191c1d !important;
+        }
+
+        html.light .text-on-surface-variant {
+            color: #434656 !important;
+        }
+
+        html.light .text-on-secondary-container {
+            color: #61646c !important;
+        }
+
+        html.light .text-primary {
+            color: #003ec7 !important;
+        }
+
+        html.light .text-on-primary {
+            color: #ffffff !important;
+        }
+
+        html.light .text-outline {
+            color: #737688 !important;
+        }
+
+        html.light .border-outline-variant {
+            border-color: #c3c5d9 !important;
+        }
+
+        html.light .border-outline {
+            border-color: #737688 !important;
+        }
+
+        html.light .border-background {
+            border-color: #f8f9fa !important;
+        }
+
+        html.light .hover\:text-primary:hover {
+            color: #003ec7 !important;
+        }
+
+        html.light .hover\:bg-surface-container:hover {
+            background-color: #edeeef !important;
+        }
+
+        html.light .experience-card:hover {
+            border-color: rgba(0, 62, 199, 0.4);
+            background-color: #ffffff !important;
+        }
+
+        html.light .experience-list li {
+            color: #434656;
+        }
+
+        html.light .experience-list li::before {
+            color: #003ec7;
+        }
+
+        @keyframes stitch-scan-flash {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- Header / TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-outline-variant">
+    <div class="max-w-container-max-width mx-auto px-margin-page h-20 flex justify-between items-center">
+        <!-- Logo -->
+        <a class="font-h3 text-h3 font-bold text-on-surface tracking-tighter uppercase shrink-0 hover:text-primary transition-colors"
+           href="#hero" aria-label="Voltar para o início da página">FELIPE BRANDÃO</a>
+        <!-- Desktop Navigation (Centered) -->
+        <div class="hidden md:flex flex-1 justify-center gap-stack-lg">
+            <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+               href="#about">Sobre</a>
+            <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+               href="#stack">Habilidades</a>
+            <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+               href="#experience">Experiência</a>
+            <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+               href="#education">Formação</a>
+            <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+               href="#contact">Contato</a>
+        </div>
+        <!-- Actions & Mobile Toggle -->
+        <div class="flex items-center gap-stack-md shrink-0">
+            <button aria-label="Alternar tema"
+                    class="p-2 text-on-surface hover:bg-surface-container rounded-full transition-colors flex items-center justify-center"
+                    id="theme-toggle">
+                <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+            </button>
+            <a class="hidden sm:block bg-primary text-on-primary font-label text-label px-stack-md py-stack-sm rounded hover:opacity-80 transition-opacity"
+               href="assets/docs/Felipe_Brandao_Cordeiro_CV.pdf" download>Download CV</a>
+            <button class="md:hidden text-on-surface p-2"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="hidden md:hidden absolute top-20 left-0 w-full bg-background border-b border-outline-variant p-6 flex flex-col gap-4 animate-in slide-in-from-top duration-300"
+         id="mobile-menu">
+        <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary" href="#about"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Sobre</a>
+        <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary" href="#stack"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Habilidades</a>
+        <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary" href="#experience"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Experiência</a>
+        <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary" href="#education"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Formação</a>
+        <a class="font-technical-caps text-technical-caps text-on-surface-variant hover:text-primary" href="#contact"
+           onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contato</a>
+        <div class="flex items-center justify-between py-2 border-t border-outline-variant">
+            <span class="font-technical-caps text-technical-caps text-on-surface-variant">Alternar Tema</span>
+            <button class="p-2 text-on-surface hover:bg-surface-container rounded-full transition-colors flex items-center justify-center"
+                    id="mobile-theme-toggle">
+                <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+            </button>
+        </div>
+        <a class="bg-primary text-on-primary font-label text-label px-stack-md py-stack-sm rounded w-full mt-2 text-center"
+           href="assets/docs/Felipe_Brandao_Cordeiro_CV.pdf" download>Download CV</a>
+    </div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-40 pb-20 px-margin-page max-w-container-max-width mx-auto min-h-screen flex flex-col justify-center"
+        id="hero">
+    <div class="flex flex-col md:flex-row gap-gutter items-center md:items-start">
+        <div class="flex-1 space-y-stack-md text-center md:text-left">
+            <div class="inline-block py-1 px-3 bg-surface-container-high border border-outline-variant rounded">
+                <span class="font-technical-caps text-technical-caps text-primary uppercase">Experiência em Ambientes Corporativos</span>
+            </div>
+            <h1 class="font-h1 text-h1 text-on-surface">FELIPE BRANDÃO CORDEIRO</h1>
+            <h2 class="font-h2 text-h2 text-outline"
+                style="animation-duration: 1.5s; animation-timing-function: ease-out; animation-iteration-count: 1; animation-direction: normal; animation-fill-mode: forwards; animation-play-state: running; animation-name: stitch-scan-flash; animation-timeline: auto; animation-range: normal; margin-top: 16px;">
+                Senior Backend Engineer | Microservices &amp; Distributed Systems</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">Experiência em
+                desenvolvimento backend Java, microsserviços e sistemas distribuídos, atuando na construção de soluções
+                escaláveis e resilientes.</p>
+            <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                <span class="px-2 py-1 bg-surface-container border border-outline-variant rounded text-technical-caps text-on-surface-variant">Java</span>
+                <span class="px-2 py-1 bg-surface-container border border-outline-variant rounded text-technical-caps text-on-surface-variant">Spring Boot</span>
+                <span class="px-2 py-1 bg-surface-container border border-outline-variant rounded text-technical-caps text-on-surface-variant">Quarkus</span>
+                <span class="px-2 py-1 bg-surface-container border border-outline-variant rounded text-technical-caps text-on-surface-variant">Kafka</span>
+                <span class="px-2 py-1 bg-surface-container border border-outline-variant rounded text-technical-caps text-on-surface-variant">Sistemas Distribuídos</span>
+                <span class="px-2 py-1 bg-surface-container border border-outline-variant rounded text-technical-caps text-on-surface-variant">Integração de Sistemas</span>
+                <span class="px-2 py-1 bg-surface-container border border-outline-variant rounded text-technical-caps text-on-surface-variant">Microsserviços</span>
+            </div>
+            <div class="flex flex-wrap justify-center md:justify-start gap-stack-md pt-stack-md">
+                <a class="bg-primary text-on-primary font-label text-label px-8 py-3 rounded-lg flex items-center gap-2 hover:opacity-90 transition-all"
+                   href="#experience">
+                    <span class="material-symbols-outlined" data-icon="work">work</span>
+                    Ver Experiência
+                </a>
+                <a class="border border-outline-variant text-on-surface font-label text-label px-8 py-3 rounded-lg flex items-center gap-2 hover:bg-surface-container transition-all"
+                   href="#contact">
+                    <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                    Contato
+                </a>
+            </div>
+            <div class="flex gap-stack-md justify-center md:justify-start pt-stack-lg text-outline">
+                <a class="hover:text-primary transition-colors flex items-center gap-1"
+                   href="https://github.com/felipebrandao" target="_blank" rel="noreferrer"><span
+                        class="material-symbols-outlined" data-icon="link">link</span> GitHub</a>
+                <a class="hover:text-primary transition-colors flex items-center gap-1"
+                   href="https://www.linkedin.com/in/felipeb31/" target="_blank" rel="noreferrer"><span
+                        class="material-symbols-outlined" data-icon="person">person</span> LinkedIn</a>
+                <a class="hover:text-primary transition-colors flex items-center gap-1" href="#"><span
+                        class="material-symbols-outlined" data-icon="location_on">location_on</span> Camaçari, BA</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- About Section -->
+<section class="py-section-gap px-margin-page max-w-container-max-width mx-auto border-t border-outline-variant"
+         id="about">
+    <div class="max-w-4xl mx-auto text-center space-y-stack-md">
+        <h2 class="font-h2 text-h2 text-on-surface">Sobre</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Profissional com 19 anos de experiência em tecnologia, com forte atuação em backend Java, microsserviços e
+            sistemas distribuídos. Pós-graduado em Arquitetura e Desenvolvimento Java pela FIAP. Experiência em
+            ambientes corporativos de grande porte, atuando com integração de sistemas, mensageria, CI/CD e práticas
+            ágeis. Atuação como referência técnica em times ágeis, contribuindo com decisões arquiteturais, qualidade de
+            software e evolução contínua de plataformas corporativas.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-stack-md pt-stack-lg">
+            <div class="p-stack-md bg-surface-container rounded border border-outline-variant">
+                <span class="block text-primary font-h3 text-h3">19+</span>
+                <span class="text-label font-label text-on-surface-variant">Anos em Tecnologia</span>
+            </div>
+            <div class="p-stack-md bg-surface-container rounded border border-outline-variant">
+                <span class="block text-primary font-h3 text-h3">Java</span>
+                <span class="text-label font-label text-on-surface-variant">Backend &amp; APIs</span>
+            </div>
+            <div class="p-stack-md bg-surface-container rounded border border-outline-variant">
+                <span class="block text-primary font-h3 text-h3"><b data-index-in-node="0" data-path-to-node="11,1,0">Arquitetura</b></span>
+                <span class="text-label font-label text-on-surface-variant">Microsserviços &amp; DDD</span>
+            </div>
+            <div class="p-stack-md bg-surface-container rounded border border-outline-variant">
+                <span class="block text-primary font-h3 text-h3"><b data-index-in-node="0" data-path-to-node="11,3,0">Kafka</b></span>
+                <span class="text-label font-label text-on-surface-variant">Sistemas Distribuídos</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Specialties Section -->
+<section class="py-section-gap px-margin-page max-w-container-max-width mx-auto border-t border-outline-variant"
+         id="specialties">
+    <h2 class="font-h2 text-h2 text-on-surface mb-stack-lg text-center">Especialidades</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+        <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl flex flex-col items-center text-center space-y-2">
+            <span class="material-symbols-outlined text-primary text-3xl">code</span>
+            <span class="font-technical-caps text-technical-caps text-on-surface">Backend Java</span>
+        </div>
+        <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl flex flex-col items-center text-center space-y-2">
+            <span class="material-symbols-outlined text-primary text-3xl">hub</span>
+            <span class="font-technical-caps text-technical-caps text-on-surface">Microsserviços</span>
+        </div>
+        <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl flex flex-col items-center text-center space-y-2">
+            <span class="material-symbols-outlined text-primary text-3xl">sync_alt</span>
+            <span class="font-technical-caps text-technical-caps text-on-surface">Integração de Sistemas</span>
+        </div>
+        <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl flex flex-col items-center text-center space-y-2">
+            <span class="material-symbols-outlined text-primary text-3xl">settings_input_component</span>
+            <span class="font-technical-caps text-technical-caps text-on-surface">Kafka</span>
+        </div>
+        <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl flex flex-col items-center text-center space-y-2">
+            <span class="material-symbols-outlined text-primary text-3xl">api</span>
+            <span class="font-technical-caps text-technical-caps text-on-surface">APIs REST</span>
+        </div>
+        <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl flex flex-col items-center text-center space-y-2">
+            <span class="material-symbols-outlined text-primary text-3xl">lan</span>
+            <span class="font-technical-caps text-technical-caps text-on-surface">Arquitetura Distribuída</span>
+        </div>
+        <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl flex flex-col items-center text-center space-y-2">
+            <span class="material-symbols-outlined text-primary text-3xl">cloud</span>
+            <span class="font-technical-caps text-technical-caps text-on-surface">Cloud &amp; DevOps</span>
+        </div>
+        <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl flex flex-col items-center text-center space-y-2">
+            <span class="material-symbols-outlined text-primary text-3xl">speed</span>
+            <span class="font-technical-caps text-technical-caps text-on-surface">CI/CD</span>
+        </div>
+    </div>
+</section>
+<!-- Technical Stack Section -->
+<section class="py-section-gap px-margin-page bg-surface-container-low" id="stack">
+    <div class="max-w-container-max-width mx-auto">
+        <h2 class="font-h2 text-h2 text-on-surface mb-stack-lg text-center">Habilidades Técnicas</h2>
+        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+            <!-- Backend -->
+            <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl">
+                <h3 class="font-label text-label text-primary uppercase mb-stack-md">Backend</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Java</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Spring Boot</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Quarkus</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">REST APIs</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">C#</span>
+                </div>
+            </div>
+            <!-- Arquitetura -->
+            <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl">
+                <h3 class="font-label text-label text-primary uppercase mb-stack-md">Arquitetura</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Microsserviços</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Clean Architecture</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Domain-Driven Design (DDD)</span>
+                </div>
+            </div>
+            <!-- Bancos de Dados -->
+            <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl">
+                <h3 class="font-label text-label text-primary uppercase mb-stack-md">Bancos de Dados</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Oracle</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">PostgreSQL</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">SQL Server</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">MongoDB</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">DB2</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Elasticsearch</span>
+                </div>
+            </div>
+            <!-- DevOps & Cloud -->
+            <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl">
+                <h3 class="font-label text-label text-primary uppercase mb-stack-md">DevOps &amp; Cloud</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Docker</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Bamboo</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Jenkins</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Azure DevOps</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">CI/CD</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">SonarQube</span>
+                </div>
+            </div>
+            <!-- Frontend -->
+            <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl">
+                <h3 class="font-label text-label text-primary uppercase mb-stack-md">Frontend (básico)</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Angular</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">HTML</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">CSS</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">JavaScript</span>
+                </div>
+            </div>
+            <!-- Metodologias -->
+            <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl">
+                <h3 class="font-label text-label text-primary uppercase mb-stack-md">Metodologias</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Scrum</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Kanban</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Agile</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">GitFlow</span>
+                </div>
+            </div>
+            <!-- Testes -->
+            <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl">
+                <h3 class="font-label text-label text-primary uppercase mb-stack-md">Testes</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">JUnit</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Mockito</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Selenium</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Wiremock</span>
+                </div>
+            </div>
+            <!-- Ferramentas -->
+            <div class="p-stack-md bg-surface-container border border-outline-variant rounded-xl">
+                <h3 class="font-label text-label text-primary uppercase mb-stack-md">Ferramentas</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">IntelliJ</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Eclipse</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Jira</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Confluence</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">Bitbucket</span>
+                    <span class="px-2 py-1 bg-surface-container-highest text-[10px] font-bold text-on-surface-variant rounded">GitLab</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Experience Section -->
+<section class="py-section-gap px-margin-page max-w-container-max-width mx-auto" id="experience">
+    <h2 class="font-h2 text-h2 text-on-surface mb-stack-lg">Trajetória Profissional</h2>
+    <div class="relative border-l-2 border-outline-variant ml-4 pl-8 space-y-16">
+        <!-- 1. GFT Technologies -->
+        <div class="relative">
+            <div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background"></div>
+            <div class="flex flex-col md:flex-row md:justify-between items-start mb-6">
+                <div>
+                    <h3 class="font-h3 text-h3 text-on-surface">GFT Technologies</h3>
+                    <p class="text-label font-label text-primary mb-1">Senior Backend Engineer</p>
+                </div>
+                <span class="font-technical-caps text-technical-caps text-primary">Jun/2020 - Jan/2026</span>
+            </div>
+            <div class="space-y-8"><!-- Grupo OVD Project -->
+                <div class="bg-surface-container p-6 rounded-lg border border-outline-variant experience-card transition-all">
+                    <h4 class="font-bold text-on-surface mb-3 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                        Projeto Grupo OVD
+                    </h4>
+                    <p class="text-on-surface text-sm mb-4">Sistema B2B e CRM interno com arquitetura distribuída.</p>
+                    <div class="mb-4">
+                        <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                        <ul class="experience-list text-on-surface-variant text-sm list-none p-0">
+                            <li class="">Construção de microsserviços com Java/Quarkus;</li>
+                            <li class="">Integração via Apache Kafka;</li>
+                            <li class="">Desenvolvimento de BFF para Angular;</li>
+                            <li class="">Exposição de APIs REST;</li>
+                            <li class="">Realização de Code reviews e onboarding de novos membros.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-label text-primary text-xs uppercase font-bold mb-2">Stack &amp; Ecossistema:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Java com Quarkus</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Apache Kafka</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Angular</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Oracle</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">OpenShift</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">GitLab CI/CD</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">JUnit</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">WireMock</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Scrum e Kanban</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bradesco Project -->
+                <div class="bg-surface-container p-6 rounded-lg border border-outline-variant experience-card transition-all">
+                    <h4 class="font-bold text-on-surface mb-3 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">cloud</span>
+                        Projeto Bradesco
+                    </h4>
+                    <p class="text-on-surface text-sm mb-4">Migração on-premise para Microsoft Azure.</p>
+                    <div class="mb-4">
+                        <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                        <ul class="experience-list text-on-surface-variant text-sm list-none p-0">
+                            <li class="">Desenvolvimento backend Java/Spring Boot;</li>
+                            <li class="">Implementação de processos de migração Cloud;</li>
+                            <li class="">Integração com Redis e Azure Service Bus;</li>
+                            <li class="">Garantia de qualidade, segurança e observabilidade.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-label text-primary text-xs uppercase font-bold mb-2">Stack &amp; Ecossistema:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Java</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Spring Boot</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">PostgreSQL</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Microsoft Azure</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Redis</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Azure Service Bus</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Bamboo</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">SonarQube</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Dynatrace</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">JUnit</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Scrum</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- B3 Project -->
+                <div class="bg-surface-container p-6 rounded-lg border border-outline-variant experience-card transition-all">
+                    <h4 class="font-bold text-on-surface mb-3 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">corporate_fare</span>
+                        Projeto B3
+                    </h4>
+                    <p class="text-on-surface text-sm mb-4">Desenvolvimento de plataforma para mercado livre de energia
+                        (microsserviços).</p>
+                    <div class="mb-4">
+                        <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                        <ul class="experience-list text-on-surface-variant text-sm list-none p-0">
+                            <li class="">Desenvolvimento backend Java/Spring Boot;</li>
+                            <li class="">Construção de APIs REST;</li>
+                            <li class="">Suporte a pipelines CI/CD;</li>
+                            <li class="">Participação em cerimônias ágeis;</li>
+                            <li class="">Colaboração multidisciplinar.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-label text-primary text-xs uppercase font-bold mb-2">Stack &amp; Ecossistema:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Java com Spring Boot</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Oracle</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Bamboo</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Bitbucket</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">JUnit</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Mockito</span>
+                            <span class="px-2 py-0.5 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Scrum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2. Rommanel -->
+        <div class="relative">
+            <div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-outline border-4 border-background"></div>
+            <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
+                <div>
+                    <h3 class="font-h3 text-h3 text-on-surface">Rommanel</h3>
+                    <p class="text-label font-label text-outline mb-1">Analista de Sistemas</p>
+                </div>
+                <span class="font-technical-caps text-technical-caps text-outline">Jun/2019 - Abr/2020</span>
+            </div>
+            <div class="bg-surface-container p-6 rounded-lg border border-outline-variant">
+                <p class="text-on-surface text-sm mb-4">Atuação na manutenção e evolução de sistemas internos, com foco
+                    em estabilidade, automação de processos e melhoria da confiabilidade dos dados.</p>
+                <div class="mb-4">
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                    <ul class="experience-list text-on-surface text-sm list-none p-0">
+                        <li class="">Manutenção de aplicações corporativas;</li>
+                        <li class="">Automação de processos manuais e integração entre sistemas;</li>
+                        <li class="">Apoio direto ao negócio.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Stack &amp; Ecossistema:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">C#</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">VB6</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">SQL Server</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Git</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Azure DevOps</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3. Indra Brasil / Santander -->
+        <div class="relative">
+            <div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-outline border-4 border-background"></div>
+            <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
+                <div>
+                    <h3 class="font-h3 text-h3 text-on-surface">Indra Brasil</h3>
+                    <p class="text-label font-label text-outline mb-1">Analista de Sistemas</p>
+                </div>
+                <span class="font-technical-caps text-technical-caps text-outline">Ago/2018 - Mai/2019</span>
+            </div>
+            <div class="space-y-8">
+                <div class="bg-surface-container p-6 rounded-lg border border-outline-variant experience-card transition-all">
+                    <h4 class="font-bold text-on-surface mb-3 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">account_balance</span>
+                        Projeto Santander
+                    </h4>
+                    <p class="text-on-surface text-sm mb-4">Atuação em projetos do setor financeiro, com foco na
+                        migração de sistemas legados em VB6 para Java, além da manutenção de sistemas existentes.</p>
+                    <div class="mb-4">
+                        <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                        <ul class="experience-list text-on-surface text-sm list-none p-0">
+                            <li class="">Migração de sistemas de VB6 para Java com Spring;</li>
+                            <li class="">Manutenção de ferramentas Java existentes;</li>
+                            <li class="">Melhoria de estabilidade e performance de sistemas legados.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-label text-primary text-xs uppercase font-bold mb-2">Stack &amp; Ecossistema:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Java</span>
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Spring</span>
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">JPA / Hibernate</span>
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">REST / SOAP</span>
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Oracle / DB2</span>
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">WebSphere</span>
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Jenkins</span>
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">RTC</span>
+                            <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Scrum e Kanban</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4. Wiz Soluções -->
+        <div class="relative">
+            <div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-outline border-4 border-background"></div>
+            <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
+                <div>
+                    <h3 class="font-h3 text-h3 text-on-surface">Wiz Soluções</h3>
+                    <p class="text-label font-label text-outline mb-1">Analista de Sistemas</p>
+                </div>
+                <span class="font-technical-caps text-technical-caps text-outline">Out/2017 - Ago/2018</span>
+            </div>
+            <div class="bg-surface-container p-6 rounded-lg border border-outline-variant">
+                <p class="text-on-surface text-sm mb-4">Desenvolvimento de um aplicativo voltado para corretores de
+                    seguros, apoiando operações comerciais e integração com sistemas internos.</p>
+                <div class="mb-4">
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                    <ul class="experience-list text-on-surface text-sm list-none p-0">
+                        <li class="">Desenvolvimento de aplicação voltada para corretores;</li>
+                        <li class="">Integração entre backend e frontend;</li>
+                        <li class="">Análise de requisitos técnicos e execução de testes.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Stack &amp; Ecossistema:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Java</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">C#</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Spring / Hibernate</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">MongoDB / SQL Server</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">JavaScript / jQuery</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Jenkins</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">SonarQube</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 5. Dow Brasil -->
+        <div class="relative">
+            <div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-outline border-4 border-background"></div>
+            <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
+                <div>
+                    <h3 class="font-h3 text-h3 text-on-surface">Dow Brasil</h3>
+                    <p class="text-label font-label text-outline mb-1">Analista de Sistemas</p>
+                </div>
+                <span class="font-technical-caps text-technical-caps text-outline">Set/2016 - Out/2017</span>
+            </div>
+            <div class="bg-surface-container p-6 rounded-lg border border-outline-variant">
+                <p class="text-on-surface text-sm mb-4">Atuação no desenvolvimento e manutenção de sistemas internos,
+                    com foco em melhoria de processos, redução de multas operacionais e eliminação de ferramentas
+                    terceiras.</p>
+                <div class="mb-4">
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                    <ul class="experience-list text-on-surface text-sm list-none p-0">
+                        <li class="">Desenvolvimento de soluções em Java e C#;</li>
+                        <li class="">Criação de automações VBA integradas ao SAP;</li>
+                        <li class="">Modelagem e consultas em SQL Server e Access;</li>
+                        <li class="">Melhoria contínua de processos internos.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Stack &amp; Ecossistema:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Java</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">C#</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">VBA</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">SQL Server</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">SAP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 6. Toke e Crie Comércio -->
+        <div class="relative">
+            <div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-outline border-4 border-background"></div>
+            <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
+                <div>
+                    <h3 class="font-h3 text-h3 text-on-surface">Toke e Crie Comércio</h3>
+                    <p class="text-label font-label text-outline mb-1">Analista de Sistemas</p>
+                </div>
+                <span class="font-technical-caps text-technical-caps text-outline">Abr/2013 - Jan/2016</span>
+            </div>
+            <div class="bg-surface-container p-6 rounded-lg border border-outline-variant">
+                <p class="text-on-surface text-sm mb-4">Desenvolvimento e manutenção de sistemas corporativos, com
+                    atuação também em suporte técnico e governança de TI.</p>
+                <div class="mb-4">
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                    <ul class="experience-list text-on-surface text-sm list-none p-0">
+                        <li class="">Desenvolvimento em VB6;</li>
+                        <li class="">Customizações e correção de falhas em sistemas internos;</li>
+                        <li class="">Documentação e governança de TI (ITIL/COBIT);</li>
+                        <li class="">Suporte técnico especializado.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Stack &amp; Ecossistema:</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">VB6</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">MySQL</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">Windows / Linux</span>
+                        <span class="px-2 py-1 bg-background border border-outline-variant rounded text-[10px] text-on-surface-variant">ITIL / COBIT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 7. Mundial Informática -->
+        <div class="relative">
+            <div class="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-outline border-4 border-background"></div>
+            <div class="flex flex-col md:flex-row md:justify-between items-start mb-4">
+                <div>
+                    <h3 class="font-h3 text-h3 text-on-surface">Mundial Informática</h3>
+                    <p class="text-label font-label text-outline mb-1">Analista de Suporte e Implementação</p>
+                </div>
+                <span class="font-technical-caps text-technical-caps text-outline">Dez/2007 - Abr/2012</span>
+            </div>
+            <div class="bg-surface-container p-6 rounded-lg border border-outline-variant experience-card transition-all">
+                <p class="text-on-surface text-sm mb-4">Atuação com suporte e implantação de sistemas corporativos e
+                    suporte ERP. Realização de treinamentos, testes e implantações em clientes.</p>
+                <div class="mb-4">
+                    <p class="text-label text-primary text-xs uppercase font-bold mb-2">Principais Atividades:</p>
+                    <ul class="experience-list text-on-surface-variant text-sm list-none p-0">
+                        <li class="">Suporte a sistemas ERP (Fiscal, Folha, Contábil, Automação Comercial);</li>
+                        <li class="">Atendimento remoto e presencial para resolução de incidentes;</li>
+                        <li class="">Implantação e execução de testes de novos sistemas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Education Section -->
+<section class="py-section-gap px-margin-page max-w-container-max-width mx-auto" id="education">
+    <h2 class="font-h2 text-h2 text-on-surface mb-stack-lg">Formação Acadêmica</h2>
+    <div class="grid md:grid-cols-2 gap-gutter">
+        <div class="p-gutter border border-outline-variant rounded-lg bg-surface-container-low">
+            <span class="font-technical-caps text-technical-caps text-primary mb-2 block">2023 - 2024</span>
+            <h3 class="font-h3 text-h3 text-on-surface">Pós-graduação em Arquitetura e desenvolvimento em Java</h3>
+            <p class="text-on-surface-variant mt-2">FIAP</p>
+            <p class="text-outline text-sm mt-1">Especialização avançada em arquitetura de software e ecossistema
+                Java.</p>
+        </div>
+        <div class="p-gutter border border-outline-variant rounded-lg bg-surface-container-low">
+            <span class="font-technical-caps text-technical-caps text-primary mb-2 block">2008 - 2011</span>
+            <h3 class="font-h3 text-h3 text-on-surface">Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+            <p class="text-on-surface-variant mt-2">UNIP - Universidade Paulista</p>
+            <p class="text-outline text-sm mt-1">Formação tecnológica focada em desenvolvimento de software e análise de
+                processos.</p>
+        </div>
+    </div>
+</section>
+<!-- Tech Cloud Visual -->
+<section class="py-section-gap px-margin-page bg-background overflow-hidden">
+    <div class="max-w-container-max-width mx-auto flex flex-wrap justify-center gap-stack-md opacity-40 hover:opacity-80 transition-opacity">
+        <span class="text-h2 font-bold">JAVA</span>
+        <span class="text-h1 font-black text-primary">KAFKA</span>
+        <span class="text-h3 font-medium">SPRING BOOT</span>
+        <span class="text-h2 font-light">QUARKUS</span>
+        <span class="text-h3 font-extrabold">MICROSSERVIÇOS</span>
+        <span class="text-h1 font-bold">SISTEMAS DISTRIBUÍDOS</span>
+        <span class="text-h2 font-medium">APIs REST</span>
+        <span class="text-h1 font-black">ORACLE</span>
+        <span class="text-h3 font-light">OPENSHIFT</span>
+        <span class="text-h2 font-extrabold">CI/CD</span>
+        <span class="text-h3 font-bold">INTEGRAÇÃO</span>
+        <span class="text-h1 font-medium">BACKEND</span>
+    </div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-page max-w-container-max-width mx-auto" id="contact">
+    <div class="border border-outline-variant rounded-3xl overflow-hidden bg-surface-container-low">
+        <div class="grid md:grid-cols-2">
+            <!-- Left -->
+            <div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant">
+<span class="font-technical-caps text-primary uppercase tracking-widest">
+          Disponível para oportunidades
+        </span>
+                <h2 class="font-h1 text-h2 text-on-surface mt-4">
+                    Backend Java, Microsserviços e Sistemas Distribuídos
+                </h2>
+                <p class="text-on-surface-variant mt-6 leading-relaxed">
+                    Experiência em plataformas corporativas de alta demanda,
+                    integração de sistemas, mensageria e evolução de arquiteturas backend.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-8">
+<span class="px-3 py-1 border border-outline-variant rounded text-xs">
+            Java
+          </span>
+                    <span class="px-3 py-1 border border-outline-variant rounded text-xs">
+            Spring Boot
+          </span>
+                    <span class="px-3 py-1 border border-outline-variant rounded text-xs">
+            Kafka
+          </span>
+                    <span class="px-3 py-1 border border-outline-variant rounded text-xs">
+            Microsserviços
+          </span>
+                </div>
+            </div>
+            <!-- Right -->
+            <div class="p-12 flex flex-col justify-between">
+                <div class="space-y-6">
+                    <div>
+<span class="text-technical-caps text-primary uppercase">
+              Email
+            </span>
+                        <p class="text-on-surface mt-1">
+                            felipe.b31@gmail.com
+                        </p>
+                    </div>
+                    <div>
+<span class="text-technical-caps text-primary uppercase">
+              Telefone
+            </span>
+                        <p class="text-on-surface mt-1">
+                            <a class="inline-flex items-center gap-2 hover:text-primary transition-colors"
+                               href="https://wa.me/5511968838181" target="_blank" rel="noreferrer"
+                               aria-label="Chamar no WhatsApp pelo número +55 11 96883-8181">
+                                <img class="w-4 h-4" src="assets/img/whatsapp.svg" alt="" aria-hidden="true"/>
+                                +55 11 96883-8181
+                            </a>
+                        </p>
+                    </div>
+                    <div>
+<span class="text-technical-caps text-primary uppercase">
+              Localização
+            </span>
+                        <p class="text-on-surface mt-1">
+                            Camaçari, Bahia — Brasil
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4 mt-10">
+                    <a class="bg-primary text-on-primary px-6 py-3 rounded-lg font-medium hover:opacity-90 transition"
+                       href="mailto:felipe.b31@gmail.com">
+                        Enviar Email
+                    </a>
+                    <a class="border border-outline-variant px-6 py-3 rounded-lg text-on-surface hover:bg-surface-container transition"
+                       href="https://www.linkedin.com/in/felipeb31/" target="_blank" rel="noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-page flex flex-col md:flex-row justify-between items-center gap-gutter max-w-container-max-width mx-auto border-t border-outline-variant">
+    <div class="font-technical-caps text-technical-caps text-on-surface uppercase">Senior Backend Engineer |
+        Microservices & Distributed Systems.
+    </div>
+    <div class="flex flex-col items-center md:items-end">
+        <p class="font-label text-label text-on-secondary-container">© 2026 Felipe Brandão Cordeiro.</p>
+    </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

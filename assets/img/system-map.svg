@@ -1,0 +1,64 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa de arquitetura backend</title>
+  <desc id="desc">Diagrama abstrato com API gateway, microsserviços, mensageria, observabilidade e dados.</desc>
+  <defs>
+    <linearGradient id="bg" x1="106" y1="58" x2="784" y2="842" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18202A"/>
+      <stop offset="1" stop-color="#07090B"/>
+    </linearGradient>
+    <linearGradient id="node" x1="165" y1="178" x2="718" y2="742" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8FC7FF"/>
+      <stop offset="1" stop-color="#3F7BFF"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.34 0 0 0 0 0.67 0 0 0 0 1 0 0 0 0.38 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="900" height="900" rx="34" fill="url(#bg)"/>
+  <path d="M91 214H809M91 450H809M91 686H809M214 91V809M450 91V809M686 91V809" stroke="white" stroke-opacity=".055"/>
+  <circle cx="450" cy="450" r="304" stroke="white" stroke-opacity=".10"/>
+  <circle cx="450" cy="450" r="208" stroke="white" stroke-opacity=".10"/>
+  <path d="M226 259L450 450L674 259M226 641L450 450L674 641M450 202V698M203 450H697" stroke="#8FC7FF" stroke-opacity=".38" stroke-width="3"/>
+  <g filter="url(#glow)">
+    <rect x="329" y="389" width="242" height="122" rx="18" fill="#101820" stroke="url(#node)" stroke-width="2"/>
+    <text x="450" y="439" text-anchor="middle" fill="#EAF5FF" font-family="JetBrains Mono, monospace" font-size="22" font-weight="700">API GATEWAY</text>
+    <text x="450" y="471" text-anchor="middle" fill="#8FC7FF" font-family="JetBrains Mono, monospace" font-size="15">REST / BFF / AUTH</text>
+  </g>
+  <g>
+    <rect x="132" y="214" width="188" height="90" rx="14" fill="#12181D" stroke="white" stroke-opacity=".16"/>
+    <text x="226" y="252" text-anchor="middle" fill="#F2F7FA" font-family="Geist, Arial" font-size="22" font-weight="700">Clients</text>
+    <text x="226" y="278" text-anchor="middle" fill="#9FAEB5" font-family="JetBrains Mono, monospace" font-size="13">Web / Mobile</text>
+  </g>
+  <g>
+    <rect x="580" y="214" width="188" height="90" rx="14" fill="#12181D" stroke="white" stroke-opacity=".16"/>
+    <text x="674" y="252" text-anchor="middle" fill="#F2F7FA" font-family="Geist, Arial" font-size="22" font-weight="700">Services</text>
+    <text x="674" y="278" text-anchor="middle" fill="#9FAEB5" font-family="JetBrains Mono, monospace" font-size="13">Java / Quarkus</text>
+  </g>
+  <g>
+    <rect x="132" y="596" width="188" height="90" rx="14" fill="#12181D" stroke="white" stroke-opacity=".16"/>
+    <text x="226" y="634" text-anchor="middle" fill="#F2F7FA" font-family="Geist, Arial" font-size="22" font-weight="700">Events</text>
+    <text x="226" y="660" text-anchor="middle" fill="#9FAEB5" font-family="JetBrains Mono, monospace" font-size="13">Kafka / Bus</text>
+  </g>
+  <g>
+    <rect x="580" y="596" width="188" height="90" rx="14" fill="#12181D" stroke="white" stroke-opacity=".16"/>
+    <text x="674" y="634" text-anchor="middle" fill="#F2F7FA" font-family="Geist, Arial" font-size="22" font-weight="700">Data</text>
+    <text x="674" y="660" text-anchor="middle" fill="#9FAEB5" font-family="JetBrains Mono, monospace" font-size="13">Oracle / SQL</text>
+  </g>
+  <g>
+    <rect x="339" y="128" width="222" height="74" rx="14" fill="#0E1419" stroke="white" stroke-opacity=".14"/>
+    <text x="450" y="158" text-anchor="middle" fill="#F2F7FA" font-family="Geist, Arial" font-size="19" font-weight="700">Observability</text>
+    <text x="450" y="181" text-anchor="middle" fill="#9FAEB5" font-family="JetBrains Mono, monospace" font-size="12">logs / metrics / traces</text>
+  </g>
+  <g>
+    <rect x="339" y="698" width="222" height="74" rx="14" fill="#0E1419" stroke="white" stroke-opacity=".14"/>
+    <text x="450" y="728" text-anchor="middle" fill="#F2F7FA" font-family="Geist, Arial" font-size="19" font-weight="700">Delivery</text>
+    <text x="450" y="751" text-anchor="middle" fill="#9FAEB5" font-family="JetBrains Mono, monospace" font-size="12">CI/CD / OpenShift</text>
+  </g>
+  <circle cx="450" cy="450" r="8" fill="#8FC7FF"/>
+  <circle cx="226" cy="259" r="6" fill="#8FC7FF"/>
+  <circle cx="674" cy="259" r="6" fill="#8FC7FF"/>
+  <circle cx="226" cy="641" r="6" fill="#8FC7FF"/>
+  <circle cx="674" cy="641" r="6" fill="#8FC7FF"/>
+</svg>
