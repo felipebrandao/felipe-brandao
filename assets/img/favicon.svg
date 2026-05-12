@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="16" fill="#151818"/>
+  <rect x="16" y="16" width="96" height="96" rx="9" fill="#151818" stroke="#3b4143" stroke-width="2"/>
+  <text x="64" y="87" text-anchor="middle" fill="#f7f7f4" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="-6">FB</text>
+</svg>
