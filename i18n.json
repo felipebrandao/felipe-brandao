@@ -1,0 +1,590 @@
+{
+  "pt": {
+    "meta": {
+      "lang": "pt-BR",
+      "title": "Felipe Brandão Cordeiro | Desenvolvedor Backend Java",
+      "description": "Currículo online de Felipe Brandão Cordeiro, Desenvolvedor Backend especializado em Java, Spring Boot, Quarkus, Kafka, microsserviços, integração de sistemas e arquitetura distribuída.",
+      "ogTitle": "Felipe Brandão Cordeiro | Desenvolvedor Backend Java",
+      "ogDescription": "Currículo online de Felipe Brandão Cordeiro: Java, Spring Boot, Quarkus, Kafka, microsserviços e sistemas distribuídos.",
+      "twitterTitle": "Felipe Brandão Cordeiro | Desenvolvedor Backend Java",
+      "twitterDescription": "Java, Spring Boot, Quarkus, Kafka, microsserviços e sistemas distribuídos.",
+      "imageAlt": "Currículo online de Felipe Brandão Cordeiro",
+      "jobTitle": "Desenvolvedor Backend"
+    },
+    "nav": {
+      "brand": "FELIPE BRANDÃO",
+      "brandLabel": "Voltar para o início da página",
+      "about": "Sobre",
+      "skills": "Habilidades",
+      "experience": "Experiência",
+      "education": "Formação",
+      "contact": "Contato",
+      "downloadCV": "Download CV",
+      "toggleTheme": "Alternar Tema",
+      "toggleThemeLabel": "Alternar tema",
+      "languageLabel": "Selecionar idioma"
+    },
+    "hero": {
+      "badge": "Experiência em Ambientes Corporativos",
+      "name": "FELIPE BRANDÃO CORDEIRO",
+      "title": "Desenvolvedor Backend",
+      "description": "Experiência em desenvolvimento backend Java, microsserviços e sistemas distribuídos, atuando na construção de soluções escaláveis e resilientes.",
+      "tags": ["Java", "Spring Boot", "Quarkus", "Kafka", "Sistemas Distribuídos", "Integração de Sistemas", "Microsserviços"],
+      "viewExperience": "Ver Experiência",
+      "contact": "Contato",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "location": "Camaçari, BA"
+    },
+    "about": {
+      "title": "Sobre",
+      "description": "Profissional com 19 anos de experiência em tecnologia, com forte atuação em backend Java, microsserviços e sistemas distribuídos. Pós-graduado em Arquitetura e Desenvolvimento Java pela FIAP. Experiência em ambientes corporativos de grande porte, atuando com integração de sistemas, mensageria, CI/CD e práticas ágeis. Atuação como referência técnica em times ágeis, contribuindo com decisões arquiteturais, qualidade de software e evolução contínua de plataformas corporativas.",
+      "yearsValue": "19+",
+      "yearsInTech": "Anos em Tecnologia",
+      "backendValue": "Java",
+      "backendAPIs": "Backend & APIs",
+      "architectureValue": "Arquitetura",
+      "microservicesDDD": "Microsserviços & DDD",
+      "kafkaValue": "Kafka",
+      "distributedSystems": "Sistemas Distribuídos"
+    },
+    "specialties": {
+      "title": "Especialidades",
+      "items": [
+        { "icon": "code", "label": "Backend Java" },
+        { "icon": "hub", "label": "Microsserviços" },
+        { "icon": "sync_alt", "label": "Integração de Sistemas" },
+        { "icon": "settings_input_component", "label": "Kafka" },
+        { "icon": "api", "label": "APIs REST" },
+        { "icon": "lan", "label": "Arquitetura Distribuída" },
+        { "icon": "cloud", "label": "Cloud & DevOps" },
+        { "icon": "speed", "label": "CI/CD" }
+      ]
+    },
+    "stack": {
+      "title": "Habilidades Técnicas",
+      "backend": "Backend",
+      "architecture": "Arquitetura",
+      "databases": "Bancos de Dados",
+      "devopsCloud": "DevOps & Cloud",
+      "frontend": "Frontend",
+      "methodologies": "Metodologias",
+      "tests": "Testes",
+      "tools": "Ferramentas",
+      "cards": [
+        { "title": "Backend", "items": ["Java", "Spring Boot", "Quarkus", "REST APIs", "C#"] },
+        { "title": "Arquitetura", "items": ["Microsserviços", "Clean Architecture", "Domain-Driven Design (DDD)"] },
+        { "title": "Bancos de Dados", "items": ["Oracle", "PostgreSQL", "SQL Server", "MongoDB", "DB2", "Elasticsearch"] },
+        { "title": "DevOps & Cloud", "items": ["Docker", "Bamboo", "Jenkins", "Azure DevOps", "CI/CD", "SonarQube"] },
+        { "title": "Frontend", "items": ["Angular", "HTML", "CSS", "JavaScript"] },
+        { "title": "Metodologias", "items": ["Scrum", "Kanban", "Agile", "GitFlow"] },
+        { "title": "Testes", "items": ["JUnit", "Mockito", "Selenium", "Wiremock"] },
+        { "title": "Ferramentas", "items": ["IntelliJ", "Eclipse", "Jira", "Confluence", "Bitbucket", "GitLab"] }
+      ]
+    },
+    "experience": {
+      "title": "Trajetória Profissional",
+      "mainActivities": "Principais Atividades:",
+      "stack": "Stack & Ecossistema:",
+      "items": [
+        {
+          "company": "GFT Technologies",
+          "role": "Desenvolvedor Backend",
+          "period": "Jun/2020 - Jan/2026",
+          "description": "Atuação em projetos corporativos de grande porte, com desenvolvimento backend Java, microsserviços, integrações, cloud e suporte a pipelines de entrega.",
+          "activities": [
+            "Construção de microsserviços com Java/Quarkus;",
+            "Desenvolvimento backend Java/Spring Boot;",
+            "Integração via Apache Kafka, Redis e Azure Service Bus;",
+            "Exposição de APIs REST;",
+            "Suporte a pipelines CI/CD;",
+            "Realização de Code reviews e onboarding de novos membros."
+          ],
+          "stack": ["Java", "Quarkus", "Spring Boot", "Apache Kafka", "Angular", "Oracle", "PostgreSQL", "Microsoft Azure", "OpenShift", "GitLab CI/CD", "Bamboo", "SonarQube", "JUnit", "Mockito", "WireMock", "Scrum"],
+          "projects": [
+            {
+              "name": "Projeto Grupo OVD",
+              "icon": "shopping_cart",
+              "description": "Sistema B2B e CRM interno com arquitetura distribuída.",
+              "activities": [
+                "Construção de microsserviços com Java/Quarkus;",
+                "Integração via Apache Kafka;",
+                "Desenvolvimento de BFF para Angular;",
+                "Exposição de APIs REST;",
+                "Realização de Code reviews e onboarding de novos membros."
+              ],
+              "stack": ["Java com Quarkus", "Apache Kafka", "Angular", "Oracle", "OpenShift", "GitLab CI/CD", "JUnit", "WireMock", "Scrum e Kanban", "Elasticsearch"]
+            },
+            {
+              "name": "Projeto Bradesco",
+              "icon": "cloud",
+              "description": "Migração on-premise para Microsoft Azure.",
+              "activities": [
+                "Desenvolvimento backend Java/Spring Boot;",
+                "Implementação de processos de migração Cloud;",
+                "Integração com Redis e Azure Service Bus;",
+                "Garantia de qualidade, segurança e observabilidade."
+              ],
+              "stack": ["Java", "Spring Boot", "PostgreSQL", "Microsoft Azure", "Redis", "Azure Service Bus", "Bamboo", "SonarQube", "Dynatrace", "JUnit", "Scrum"]
+            },
+            {
+              "name": "Projeto B3",
+              "icon": "corporate_fare",
+              "description": "Desenvolvimento de plataforma para mercado livre de energia (microsserviços).",
+              "activities": [
+                "Desenvolvimento backend Java/Spring Boot;",
+                "Construção de APIs REST;",
+                "Suporte a pipelines CI/CD;",
+                "Participação em cerimônias ágeis;",
+                "Colaboração multidisciplinar."
+              ],
+              "stack": ["Java com Spring Boot", "Oracle", "Bamboo", "Bitbucket", "JUnit", "Mockito", "Scrum"]
+            }
+          ]
+        },
+        {
+          "company": "Rommanel",
+          "role": "Analista de Sistemas",
+          "period": "Jun/2019 - Abr/2020",
+          "description": "Atuação na manutenção e evolução de sistemas internos, com foco em estabilidade, automação de processos e melhoria da confiabilidade dos dados.",
+          "activities": [
+            "Manutenção de aplicações corporativas;",
+            "Automação de processos manuais e integração entre sistemas;",
+            "Apoio direto ao negócio."
+          ],
+          "stack": ["C#", "VB6", "SQL Server", "Git", "Azure DevOps", "Scrum"]
+        },
+        {
+          "company": "Indra Brasil",
+          "role": "Analista de Sistemas",
+          "period": "Ago/2018 - Mai/2019",
+          "description": "Atuação em projetos do setor financeiro, com foco na migração de sistemas legados em VB6 para Java, além da manutenção de sistemas existentes.",
+          "activities": [
+            "Migração de sistemas de VB6 para Java com Spring;",
+            "Manutenção de ferramentas Java existentes;",
+            "Melhoria de estabilidade e performance de sistemas legados."
+          ],
+          "stack": ["Java", "Spring", "JPA / Hibernate", "REST / SOAP", "Oracle / DB2", "WebSphere", "Jenkins", "RTC", "Scrum e Kanban"],
+          "projects": [
+            {
+              "name": "Projeto Santander",
+              "icon": "account_balance",
+              "description": "Atuação em projetos do setor financeiro, com foco na migração de sistemas legados em VB6 para Java, além da manutenção de sistemas existentes.",
+              "activities": [
+                "Migração de sistemas de VB6 para Java com Spring;",
+                "Manutenção de ferramentas Java existentes;",
+                "Melhoria de estabilidade e performance de sistemas legados."
+              ],
+              "stack": ["Java", "Spring", "JPA / Hibernate", "REST / SOAP", "Oracle / DB2", "WebSphere", "Jenkins", "RTC", "Scrum e Kanban"]
+            }
+          ]
+        },
+        {
+          "company": "Wiz Soluções",
+          "role": "Analista de Sistemas",
+          "period": "Out/2017 - Ago/2018",
+          "description": "Desenvolvimento de um aplicativo voltado para corretores de seguros, apoiando operações comerciais e integração com sistemas internos.",
+          "activities": [
+            "Desenvolvimento de aplicação voltada para corretores;",
+            "Integração entre backend e frontend;",
+            "Análise de requisitos técnicos e execução de testes."
+          ],
+          "stack": ["Java", "C#", "Spring / Hibernate", "MongoDB / SQL Server", "JavaScript / jQuery", "Jenkins", "SonarQube", "Scrum"]
+        },
+        {
+          "company": "Dow Brasil",
+          "role": "Analista de Sistemas",
+          "period": "Set/2016 - Out/2017",
+          "description": "Atuação no desenvolvimento e manutenção de sistemas internos, com foco em melhoria de processos, redução de multas operacionais e eliminação de ferramentas terceiras.",
+          "activities": [
+            "Desenvolvimento de soluções em Java e C#;",
+            "Criação de automações VBA integradas ao SAP;",
+            "Modelagem e consultas em SQL Server e Access;",
+            "Melhoria contínua de processos internos."
+          ],
+          "stack": ["Java", "C#", "VBA", "SQL Server", "SAP"]
+        },
+        {
+          "company": "Toke e Crie Comércio",
+          "role": "Analista de Sistemas",
+          "period": "Abr/2013 - Jan/2016",
+          "description": "Desenvolvimento e manutenção de sistemas corporativos, com atuação também em suporte técnico e governança de TI.",
+          "activities": [
+            "Desenvolvimento em VB6;",
+            "Customizações e correção de falhas em sistemas internos;",
+            "Documentação e governança de TI (ITIL/COBIT);",
+            "Suporte técnico especializado."
+          ],
+          "stack": ["VB6", "MySQL", "Windows / Linux", "ITIL / COBIT"]
+        },
+        {
+          "company": "Tivit",
+          "role": "Analista de Suporte",
+          "period": "Set/2012 - Mar/2013",
+          "description": "Atuação no suporte técnico a sistemas corporativos, garantindo a continuidade operacional, atendimento aos usuários e apoio às práticas de governança de TI.",
+          "activities": [
+            "Suporte de primeiro e segundo nível para sistemas corporativos;",
+            "Resolução de incidentes via acesso remoto;",
+            "Documentação de problemas recorrentes e ações preventivas;",
+            "Apoio às equipes de governança e gerenciamento de serviços."
+          ],
+          "stack": ["ITIL", "COBIT"]
+        },
+        {
+          "company": "Mundial Informática",
+          "role": "Analista de Suporte e Implementação",
+          "period": "Dez/2007 - Abr/2012",
+          "description": "Atuação com suporte e implantação de sistemas corporativos e suporte ERP. Realização de treinamentos, testes e implantações em clientes.",
+          "activities": [
+            "Suporte a sistemas ERP (Fiscal, Folha, Contábil, Automação Comercial);",
+            "Atendimento remoto e presencial para resolução de incidentes;",
+            "Implantação e execução de testes de novos sistemas."
+          ],
+          "stack": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Formação Acadêmica",
+      "items": [
+        {
+          "period": "2023 - 2024",
+          "title": "Pós-graduação em Arquitetura e desenvolvimento em Java",
+          "institution": "FIAP",
+          "description": "Especialização avançada em arquitetura de software e ecossistema Java."
+        },
+        {
+          "period": "2008 - 2011",
+          "title": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+          "institution": "UNIP - Universidade Paulista",
+          "description": "Formação tecnológica focada em desenvolvimento de software e análise de processos."
+        }
+      ]
+    },
+    "techCloud": {
+      "java": "JAVA",
+      "kafka": "KAFKA",
+      "springBoot": "SPRING BOOT",
+      "quarkus": "QUARKUS",
+      "microservices": "MICROSSERVIÇOS",
+      "distributedSystems": "SISTEMAS DISTRIBUÍDOS",
+      "restApis": "APIs REST",
+      "oracle": "ORACLE",
+      "openshift": "OPENSHIFT",
+      "cicd": "CI/CD",
+      "integration": "INTEGRAÇÃO",
+      "backend": "BACKEND"
+    },
+    "contact": {
+      "availability": "Disponível para oportunidades",
+      "title": "Backend Java, Microsserviços e Sistemas Distribuídos",
+      "description": "Experiência em plataformas corporativas de alta demanda, integração de sistemas, mensageria e evolução de arquiteturas backend.",
+      "tags": ["Java", "Spring Boot", "Kafka", "Microsserviços"],
+      "email": "Email",
+      "phone": "Telefone",
+      "phoneAria": "Chamar no WhatsApp pelo número +55 11 96883-8181",
+      "locationLabel": "Localização",
+      "location": "Camaçari, Bahia — Brasil",
+      "sendEmail": "Enviar Email",
+      "linkedin": "LinkedIn"
+    },
+    "footer": {
+      "role": "Desenvolvedor Backend.",
+      "copyright": "© 2026 Felipe Brandão Cordeiro."
+    }
+  },
+  "en": {
+    "meta": {
+      "lang": "en",
+      "title": "Felipe Brandão Cordeiro | Java Backend Developer",
+      "description": "Online resume of Felipe Brandão Cordeiro, Backend Developer specialized in Java, Spring Boot, Quarkus, Kafka, microservices, system integration, and distributed architecture.",
+      "ogTitle": "Felipe Brandão Cordeiro | Java Backend Developer",
+      "ogDescription": "Online resume of Felipe Brandão Cordeiro: Java, Spring Boot, Quarkus, Kafka, microservices, and distributed systems.",
+      "twitterTitle": "Felipe Brandão Cordeiro | Java Backend Developer",
+      "twitterDescription": "Java, Spring Boot, Quarkus, Kafka, microservices, and distributed systems.",
+      "imageAlt": "Online resume of Felipe Brandão Cordeiro",
+      "jobTitle": "Backend Developer"
+    },
+    "nav": {
+      "brand": "FELIPE BRANDÃO",
+      "brandLabel": "Back to the top of the page",
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "education": "Education",
+      "contact": "Contact",
+      "downloadCV": "Download CV",
+      "toggleTheme": "Toggle Theme",
+      "toggleThemeLabel": "Toggle theme",
+      "languageLabel": "Select language"
+    },
+    "hero": {
+      "badge": "Experience in Corporate Environments",
+      "name": "FELIPE BRANDÃO CORDEIRO",
+      "title": "Backend Developer",
+      "description": "Experience in Java backend development, microservices, and distributed systems, building scalable and resilient solutions.",
+      "tags": ["Java", "Spring Boot", "Quarkus", "Kafka", "Distributed Systems", "System Integration", "Microservices"],
+      "viewExperience": "View Experience",
+      "contact": "Contact",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "location": "Camaçari, BA"
+    },
+    "about": {
+      "title": "About",
+      "description": "Technology professional with 19 years of experience, strongly focused on Java backend, microservices, and distributed systems. Postgraduate in Java Architecture and Development from FIAP. Experienced in large corporate environments, working with system integration, messaging, CI/CD, and agile practices. Acts as a technical reference in agile teams, contributing to architectural decisions, software quality, and the continuous evolution of corporate platforms.",
+      "yearsValue": "19+",
+      "yearsInTech": "Years in Technology",
+      "backendValue": "Java",
+      "backendAPIs": "Backend & APIs",
+      "architectureValue": "Architecture",
+      "microservicesDDD": "Microservices & DDD",
+      "kafkaValue": "Kafka",
+      "distributedSystems": "Distributed Systems"
+    },
+    "specialties": {
+      "title": "Specialties",
+      "items": [
+        { "icon": "code", "label": "Java Backend" },
+        { "icon": "hub", "label": "Microservices" },
+        { "icon": "sync_alt", "label": "System Integration" },
+        { "icon": "settings_input_component", "label": "Kafka" },
+        { "icon": "api", "label": "REST APIs" },
+        { "icon": "lan", "label": "Distributed Architecture" },
+        { "icon": "cloud", "label": "Cloud & DevOps" },
+        { "icon": "speed", "label": "CI/CD" }
+      ]
+    },
+    "stack": {
+      "title": "Technical Skills",
+      "backend": "Backend",
+      "architecture": "Architecture",
+      "databases": "Databases",
+      "devopsCloud": "DevOps & Cloud",
+      "frontend": "Frontend",
+      "methodologies": "Methodologies",
+      "tests": "Testing",
+      "tools": "Tools",
+      "cards": [
+        { "title": "Backend", "items": ["Java", "Spring Boot", "Quarkus", "REST APIs", "C#"] },
+        { "title": "Architecture", "items": ["Microservices", "Clean Architecture", "Domain-Driven Design (DDD)"] },
+        { "title": "Databases", "items": ["Oracle", "PostgreSQL", "SQL Server", "MongoDB", "DB2", "Elasticsearch"] },
+        { "title": "DevOps & Cloud", "items": ["Docker", "Bamboo", "Jenkins", "Azure DevOps", "CI/CD", "SonarQube"] },
+        { "title": "Frontend", "items": ["Angular", "HTML", "CSS", "JavaScript"] },
+        { "title": "Methodologies", "items": ["Scrum", "Kanban", "Agile", "GitFlow"] },
+        { "title": "Testing", "items": ["JUnit", "Mockito", "Selenium", "Wiremock"] },
+        { "title": "Tools", "items": ["IntelliJ", "Eclipse", "Jira", "Confluence", "Bitbucket", "GitLab"] }
+      ]
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "mainActivities": "Main Activities:",
+      "stack": "Stack & Ecosystem:",
+      "items": [
+        {
+          "company": "GFT Technologies",
+          "role": "Backend Developer",
+          "period": "Jun/2020 - Jan/2026",
+          "description": "Worked on large corporate projects with Java backend development, microservices, integrations, cloud, and delivery pipeline support.",
+          "activities": [
+            "Built microservices with Java/Quarkus;",
+            "Java/Spring Boot backend development;",
+            "Integrated systems through Apache Kafka, Redis, and Azure Service Bus;",
+            "Exposed REST APIs;",
+            "Supported CI/CD pipelines;",
+            "Performed code reviews and onboarded new team members."
+          ],
+          "stack": ["Java", "Quarkus", "Spring Boot", "Apache Kafka", "Angular", "Oracle", "PostgreSQL", "Microsoft Azure", "OpenShift", "GitLab CI/CD", "Bamboo", "SonarQube", "JUnit", "Mockito", "WireMock", "Scrum"],
+          "projects": [
+            {
+              "name": "Grupo OVD Project",
+              "icon": "shopping_cart",
+              "description": "B2B system and internal CRM with distributed architecture.",
+              "activities": [
+                "Built microservices with Java/Quarkus;",
+                "Integrated systems through Apache Kafka;",
+                "Developed BFF services for Angular;",
+                "Exposed REST APIs;",
+                "Performed code reviews and onboarded new team members."
+              ],
+              "stack": ["Java with Quarkus", "Apache Kafka", "Angular", "Oracle", "OpenShift", "GitLab CI/CD", "JUnit", "WireMock", "Scrum and Kanban", "Elasticsearch"]
+            },
+            {
+              "name": "Bradesco Project",
+              "icon": "cloud",
+              "description": "On-premise migration to Microsoft Azure.",
+              "activities": [
+                "Java/Spring Boot backend development;",
+                "Implemented cloud migration processes;",
+                "Integrated with Redis and Azure Service Bus;",
+                "Ensured quality, security, and observability."
+              ],
+              "stack": ["Java", "Spring Boot", "PostgreSQL", "Microsoft Azure", "Redis", "Azure Service Bus", "Bamboo", "SonarQube", "Dynatrace", "JUnit", "Scrum"]
+            },
+            {
+              "name": "B3 Project",
+              "icon": "corporate_fare",
+              "description": "Development of a platform for the free energy market using microservices.",
+              "activities": [
+                "Java/Spring Boot backend development;",
+                "Built REST APIs;",
+                "Supported CI/CD pipelines;",
+                "Participated in agile ceremonies;",
+                "Collaborated with multidisciplinary teams."
+              ],
+              "stack": ["Java with Spring Boot", "Oracle", "Bamboo", "Bitbucket", "JUnit", "Mockito", "Scrum"]
+            }
+          ]
+        },
+        {
+          "company": "Rommanel",
+          "role": "Systems Analyst",
+          "period": "Jun/2019 - Apr/2020",
+          "description": "Worked on maintenance and evolution of internal systems, focusing on stability, process automation, and data reliability.",
+          "activities": [
+            "Maintained corporate applications;",
+            "Automated manual processes and integrated systems;",
+            "Provided direct business support."
+          ],
+          "stack": ["C#", "VB6", "SQL Server", "Git", "Azure DevOps", "Scrum"]
+        },
+        {
+          "company": "Indra Brasil",
+          "role": "Systems Analyst",
+          "period": "Aug/2018 - May/2019",
+          "description": "Worked on financial sector projects, focusing on migration of legacy VB6 systems to Java and maintenance of existing systems.",
+          "activities": [
+            "Migrated systems from VB6 to Java with Spring;",
+            "Maintained existing Java tools;",
+            "Improved stability and performance of legacy systems."
+          ],
+          "stack": ["Java", "Spring", "JPA / Hibernate", "REST / SOAP", "Oracle / DB2", "WebSphere", "Jenkins", "RTC", "Scrum and Kanban"],
+          "projects": [
+            {
+              "name": "Santander Project",
+              "icon": "account_balance",
+              "description": "Worked on financial sector projects, focusing on migration of legacy VB6 systems to Java and maintenance of existing systems.",
+              "activities": [
+                "Migrated systems from VB6 to Java with Spring;",
+                "Maintained existing Java tools;",
+                "Improved stability and performance of legacy systems."
+              ],
+              "stack": ["Java", "Spring", "JPA / Hibernate", "REST / SOAP", "Oracle / DB2", "WebSphere", "Jenkins", "RTC", "Scrum and Kanban"]
+            }
+          ]
+        },
+        {
+          "company": "Wiz Soluções",
+          "role": "Systems Analyst",
+          "period": "Oct/2017 - Aug/2018",
+          "description": "Developed an application for insurance brokers, supporting commercial operations and integration with internal systems.",
+          "activities": [
+            "Developed an application for brokers;",
+            "Integrated backend and frontend layers;",
+            "Analyzed technical requirements and executed tests."
+          ],
+          "stack": ["Java", "C#", "Spring / Hibernate", "MongoDB / SQL Server", "JavaScript / jQuery", "Jenkins", "SonarQube", "Scrum"]
+        },
+        {
+          "company": "Dow Brasil",
+          "role": "Systems Analyst",
+          "period": "Sep/2016 - Oct/2017",
+          "description": "Worked on development and maintenance of internal systems, focusing on process improvement, reduction of operational penalties, and replacement of third-party tools.",
+          "activities": [
+            "Developed solutions in Java and C#;",
+            "Created VBA automations integrated with SAP;",
+            "Modeled and queried data in SQL Server and Access;",
+            "Improved internal processes continuously."
+          ],
+          "stack": ["Java", "C#", "VBA", "SQL Server", "SAP"]
+        },
+        {
+          "company": "Toke e Crie Comércio",
+          "role": "Systems Analyst",
+          "period": "Apr/2013 - Jan/2016",
+          "description": "Developed and maintained corporate systems, also working in technical support and IT governance.",
+          "activities": [
+            "Developed in VB6;",
+            "Customized and fixed issues in internal systems;",
+            "Documented and supported IT governance practices (ITIL/COBIT);",
+            "Provided specialized technical support."
+          ],
+          "stack": ["VB6", "MySQL", "Windows / Linux", "ITIL / COBIT"]
+        },
+        {
+          "company": "Tivit",
+          "role": "Support Analyst",
+          "period": "Sep/2012 - Mar/2013",
+          "description": "Worked in technical support for corporate systems, ensuring operational continuity, user support, and support for IT governance practices.",
+          "activities": [
+            "Provided first and second-level support for corporate systems;",
+            "Resolved incidents through remote access;",
+            "Documented recurring issues and preventive actions;",
+            "Supported governance and service management teams."
+          ],
+          "stack": ["ITIL", "COBIT"]
+        },
+        {
+          "company": "Mundial Informática",
+          "role": "Support and Implementation Analyst",
+          "period": "Dec/2007 - Apr/2012",
+          "description": "Worked with support and implementation of corporate systems and ERP support. Delivered training, testing, and client deployments.",
+          "activities": [
+            "Supported ERP systems (Tax, Payroll, Accounting, Commercial Automation);",
+            "Provided remote and on-site incident resolution;",
+            "Implemented and tested new systems."
+          ],
+          "stack": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Academic Education",
+      "items": [
+        {
+          "period": "2023 - 2024",
+          "title": "Postgraduate Degree in Java Architecture and Development",
+          "institution": "FIAP",
+          "description": "Advanced specialization in software architecture and the Java ecosystem."
+        },
+        {
+          "period": "2008 - 2011",
+          "title": "Technologist Degree in Systems Analysis and Development",
+          "institution": "UNIP - Universidade Paulista",
+          "description": "Technology degree focused on software development and process analysis."
+        }
+      ]
+    },
+    "techCloud": {
+      "java": "JAVA",
+      "kafka": "KAFKA",
+      "springBoot": "SPRING BOOT",
+      "quarkus": "QUARKUS",
+      "microservices": "MICROSERVICES",
+      "distributedSystems": "DISTRIBUTED SYSTEMS",
+      "restApis": "REST APIs",
+      "oracle": "ORACLE",
+      "openshift": "OPENSHIFT",
+      "cicd": "CI/CD",
+      "integration": "INTEGRATION",
+      "backend": "BACKEND"
+    },
+    "contact": {
+      "availability": "Available for opportunities",
+      "title": "Java Backend, Microservices, and Distributed Systems",
+      "description": "Experience in high-demand corporate platforms, system integration, messaging, and backend architecture evolution.",
+      "tags": ["Java", "Spring Boot", "Kafka", "Microservices"],
+      "email": "Email",
+      "phone": "Phone",
+      "phoneAria": "Open WhatsApp chat for +55 11 96883-8181",
+      "locationLabel": "Location",
+      "location": "Camaçari, Bahia — Brazil",
+      "sendEmail": "Send Email",
+      "linkedin": "LinkedIn"
+    },
+    "footer": {
+      "role": "Backend Developer.",
+      "copyright": "© 2026 Felipe Brandão Cordeiro."
+    }
+  }
+}
